@@ -1,5 +1,6 @@
 @import "_mixins.scss";
 @import "header.scss";
+@import "monies.scss";
 body {
   background-color: #060ce9;
   margin: 0%;
@@ -14,20 +15,14 @@ body {
   display: flex;
 }
 .topRows {
-  height: 14.5%;
+  height: 14vh;
   width: 16.67%;
   border: 10px solid black;
 }
 .prompts {
   font-size: 40px;
   text-align: center;
+  justify-content: center;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-}
-.monies{
-  font-size: 44px;
-  text-align: center;
-  color:#FFFF00;
-  font-family: Arial, Helvetica, sans-serif;
-}
 }

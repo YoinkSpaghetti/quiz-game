@@ -14,9 +14,8 @@ fourbutton = false;
 fivebutton = false;
 answer = false;
 correct = true;
-wrong = false;
-/* questionNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; */
-correctAnswers = [0, 1];
+wrong = false; //not working
+/* questionNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; */ correctAnswers = [0, 1];
 wrongAnswers = [1, 2];
 
 while (questionNumbers.length > 0) {
@@ -137,11 +136,10 @@ while (questionNumbers.length > 0) {
   //|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
   //debugs
-  if (onebutton == true) {
-    onebutton = false;
-    twobutton = false;
-    threebutton = false;
-    fourbutton = false;
-    fivebutton = false;
+  if (oneTurn == true) {
+    twoTurn = false;
+  }
+  if (twoTurn == true) {
+    oneTurn = false;
   }
 }
