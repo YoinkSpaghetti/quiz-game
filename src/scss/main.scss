@@ -1,27 +1,67 @@
 @import "_mixins.scss";
-@import "header.scss";
-@import "monies.scss";
 body {
-  background-color: #060ce9;
+  background-color: orangered;
   margin: 0%;
 }
-.quiz {
-  height: 96.5%;
+.quizStart {
+  height: 90%;
   width: 100%;
 }
-.createRows {
-  @include flex-col-center;
+.classOne {
   display: flex;
-}
-.topRows {
-  height: 14vh;
-  width: 16.67%;
-  border: 10px solid black;
-}
-.prompts {
-  font-size: 40px;
-  text-align: center;
   justify-content: center;
-  color: white;
-  font-family: "ITC Korinna", bold;
+  margin-top: 10vh;
+}
+.question {
+  text-align: center;
+  text-justify: center;
+  color: aquamarine;
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25vh;
+  background-color: orange;
+}
+.classRow {
+  display: flex;
+  @include flex-row-center;
+  justify-content: space-between;
+  justify-content: space-evenly;
+}
+.classCol {
+  display: flex;
+  @include flex-col-center;
+  justify-content: space-between;
+  justify-content: space-evenly;
+}
+.yes {
+  text-align: center;
+  text-justify: center;
+  color: aquamarine;
+  height: 25vh;
+  width: 25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25vh;
+  background-color: orange;
+}
+.no {
+  text-align: center;
+  text-justify: center;
+  color: aquamarine;
+  height: 25vh;
+  width: 25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25vh;
+  background-color: orange;
+}
+.testQuestion {
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }
