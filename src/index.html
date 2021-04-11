@@ -11,15 +11,15 @@
 <body>
     <section>
         <div id="startQuiz" class="quizStart">
-            <div class="classOne">'
-                <div class="question">Are you ready?</div>
+            <div class="classOne">
+                <div class="ready">Are you ready?</div>
             </div>
             <div class="classRow">
                 <div class="classCol">
-                    <button href="" onclick="myFunction()" class="yes">Yes</button>
+                    <button href="" id="yesBtn"class="yes">Yes</button>
                 </div>
                 <div class="classCol">
-                    <a href="" id="noBtn" class="no">No</a>
+                    <button href="" id="noBtn" class="no">No</button>
                 </div>
             </div>
         </div>
@@ -30,8 +30,27 @@
         </div>
         <div class="classRow">
             <div class="classCol">
-                <a href="" id="somethingelse" class="okay">okay</a>
+                <button href="" id="okayBtn" class="okay">okay</button>
             </div>
+        </div>
+    </div>
+    <div id="questionsTwo" class="testQuestion" hidden>
+        <div class="center">
+            <div class="bar">
+                <div id="timerid" class="timer"></div>
+            </div>
+        </div>
+        <div class="answers">
+            <div class="score">Score:</div>
+            <div class="question">hullo</div>
+        </div>
+        <div class="answers">
+                <button class="answerOne"></button>
+                <button class="answerTwo"></button>
+        </div>
+        <div class="answers">
+                <button class="answerThree"></button>
+                <button class="answerFour"></button>
         </div>
     </div>
 
