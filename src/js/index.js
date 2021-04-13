@@ -54,42 +54,54 @@ function timerFunction() {
   }
 } */
 
-//not to be used I guess because I'm a terrible programmer so just ignore this
-/* function randomNumber(min, max) {
-  return Math.random() * (max - min) + min;
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
 }
 //dunno how to shuffle arrays so I made it a butte-tonn lot more harder for myself
-function questionMaker() {
+function questionMaker(n, nOne, nTwo, nThree, nFour, nFive) {
   //taking a random value from wrong Answer and the question number of right Answer and putting them in an array
+  var n = randomNumber(0, 12);
+  var nOne = randomNumber(0, 11);
+  var nTwo = randomNumber(0, 10);
+  var nThree = randomNumber(0, 4);
+  var nFour = randomNumber(0, 3);
+  var nFive = randomNumber(0, 2);
   allAnswers = [rightAnswer[questionNumb]];
-  var randomNumbOne = randomNumber(-1, 13);
+  var randomNumbOne = n;
   allAnswers.push(wrongAnswer[randomNumbOne]);
-  wrongAnswer = wrongAnswer.splice(randomNumbOne, 1);
-  var randomNumbTwo = randomNumber(-1, 12); //I could've probably just reused randomNumbOne but who cares
+  wrongAnswer.splice(randomNumbOne, 1);
+  console.log(wrongAnswer);
+  var randomNumbTwo = nOne;
   allAnswers.push(wrongAnswer[randomNumbTwo]);
-  wrongAnswer = wrongAnswer.splice(randomNumbTwo, 1);
-  var randomNumbThree = randomNumber(-1, 11);
+  wrongAnswer.splice(randomNumbTwo, 1);
+  var randomNumbThree = nTwo;
   allAnswers.push(wrongAnswer[randomNumbThree]);
-  wrongAnswer = wrongAnswer.splice(randomNumbThree, 1);
+  wrongAnswer.splice(randomNumbThree, 1);
+  console.log(allAnswers);
   //then putting it a new shuffled array
   var allAnswersTwo = [];
-  var randomNumbFour = randomNumber(-1, 5);
+  var randomNumbFour = nThree;
   allAnswersTwo.push(allAnswers[randomNumbFour]);
-  allAnswers = wrongAnswer.splice(randomNumbFour, 1);
-  var randomNumbFive = randomNumber(-1, 4);
+  allAnswers.splice(randomNumbFour, 1);
+  console.log(allAnswers);
+  var randomNumbFive = nFour;
   allAnswersTwo.push(allAnswers[randomNumbFive]);
-  allAnswers = wrongAnswer.splice(randomNumbFive, 1);
-  var randomNumbSix = randomNumber(-1, 3);
+  allAnswers.splice(randomNumbFive, 1);
+  var randomNumbSix = nFive;
   allAnswersTwo.push(allAnswers[randomNumbSix]);
-  allAnswers = wrongAnswer.splice(randomNumbSix, 1);
+  allAnswers.splice(randomNumbSix, 1);
   allAnswersTwo.push(allAnswers[0]);
-  document.getElementById("firstQuestion").innerHTML = allAnswersTwo[0];
-  document.getElementById("secondQuestion").innerHTML = allAnswersTwo[1];
-  document.getElementById("thirdQuestion").innerHTML = allAnswersTwo[2];
-  document.getElementById("fourthQuestion").innerHTML = allAnswersTwo[3];
+  document.getElementById("firstAnswer").innerHTML = allAnswersTwo[0];
+  document.getElementById("secondAnswer").innerHTML = allAnswersTwo[1];
+  document.getElementById("thirdAnswer").innerHTML = allAnswersTwo[2];
+  document.getElementById("fourthAnswer").innerHTML = allAnswersTwo[3];
   console.log(allAnswersTwo);
-} */
-
+}
+function makeAnswers() {
+  var text = document.createTextNode();
+  var element = document.getElementById("new");
+  element.appendChild(text);
+}
 //switches page
 function functionThreeRight() {
   z.style.display = "none";
@@ -106,9 +118,13 @@ btn.addEventListener("click", functionOne);
 btnTwo.addEventListener(
   "click",
   functionTwo
-); /* btnThree.addEventListener("click", functionThree); */ //click makes one correct answer and three random wrong answers
-/* btnTwo.addEventListener("click", timerFunction); */
-/* btnTwo.addEventListener("click", questionMaker); */
+); /* btnTwo.addEventListener("click", timerFunction); */
+
+//click makes one correct answer and three random wrong answers
+/* btnThree.addEventListener("click", functionThree); */ btnTwo.addEventListener(
+  "click",
+  questionMaker
+);
 
 btnThreeOne.addEventListener("click", functionThreeWrong);
 btnThreeTwo.addEventListener("click", functionThreeWrong);
