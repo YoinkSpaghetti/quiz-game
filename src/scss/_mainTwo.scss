@@ -1,0 +1,74 @@
+.score {
+  height: 5vh;
+  color: white;
+  font-size: 5vh;
+}
+.question {
+  color: white;
+  font-size: 5vh;
+}
+.answerOne {
+  height: 44.5vh;
+  width: 150vw;
+  background-color: red;
+  font-size: 10vh;
+}
+.answerTwo {
+  height: 44.5vh;
+  width: 150vw;
+  background-color: blue;
+  font-size: 10vh;
+}
+.answerThree {
+  height: 44.5vh;
+  width: 50vw;
+  background-color: yellow;
+  font-size: 10vh;
+}
+.answerFour {
+  height: 44.5vh;
+  width: 50vw;
+  background-color: green;
+  font-size: 10vh;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bar {
+  width: 100vw;
+  height: 3vh;
+  background-color: white;
+  border-style: solid;
+  border-radius: 1vh;
+  border-width: 1vh;
+}
+.timer {
+  margin-left: 0vh;
+  width: 0vw;
+  height: 3vh;
+  background-color: lightblue;
+}
+.marginTopContinueScreen {
+  display: flex;
+  align-items: space-between;
+  align-items: space-evenly;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-top: 25vh;
+}
+.right {
+  justify-content: center;
+  color: white;
+  font-size: 5vh;
+}
+.wrong {
+  justify-content: center;
+  color: white;
+  font-size: 5vh;
+}
+.continueScreen {
+  height: 75vh;
+  width: 100vw;
+}

@@ -1,4 +1,5 @@
 @import "_mixins.scss";
+@import "_mainTwo";
 body {
   background-color: orangered;
   margin: 0%;
@@ -102,52 +103,4 @@ body {
   align-items: center;
   font-size: 25vh;
   background-color: orange;
-}
-.score {
-  height: 5vh;
-  color: white;
-  font-size: 5vh;
-}
-.question {
-  color: white;
-  font-size: 5vh;
-}
-.answerOne {
-  height: 44.5vh;
-  width: 150vw;
-  background-color: red;
-}
-.answerTwo {
-  height: 44.5vh;
-  width: 150vw;
-  background-color: blue;
-}
-.answerThree {
-  height: 44.5vh;
-  width: 50vw;
-  background-color: yellow;
-}
-.answerFour {
-  height: 44.5vh;
-  width: 50vw;
-  background-color: green;
-}
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.bar {
-  width: 100vw;
-  height: 3vh;
-  background-color: white;
-  border-style: solid;
-  border-radius: 1vh;
-  border-width: 1vh;
-}
-.timer {
-  margin-left: 0vh;
-  width: 0vw;
-  height: 3vh;
-  background-color: lightblue;
 }

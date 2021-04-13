@@ -1,14 +1,15 @@
 var x = document.getElementById("startQuiz");
 var y = document.getElementById("questions");
 var z = document.getElementById("questionsTwo");
-var oneCorrect = document.getElementById("");
-var oneWrong = document.getElementById("");
+var oneCorrect = document.getElementById("correctOne");
+var oneWrong = document.getElementById("wrongOne");
 var btn = document.getElementById("yesBtn");
 var btnTwo = document.getElementById("okayBtn");
 var btnThreeOne = document.getElementById("firstAnswer");
 var btnThreeTwo = document.getElementById("secondAnswer");
 var btnThreeThree = document.getElementById("thirdAnswer");
 var btnThreeFour = document.getElementById("fourthAnswer");
+let score = 0;
 /* var timerLength = document.getElementById("timerid");
 var a = timerLength.style.width; */
 var questionNumb = 0;
@@ -25,7 +26,7 @@ var wrongAnswer = [
   "yes",
   "Bruce wayne",
   "doughnuts",
-  "Jaywalking",
+  "hello",
   "Durito Bandito",
 ];
 //switches page
@@ -53,6 +54,25 @@ function timerFunction() {
     timer = timer + 1;
   }
 } */
+
+function makeAnswers() {
+  var text = document.createTextNode();
+  var element = document.getElementById("new");
+  element.appendChild(text);
+}
+//switches page
+function functionThreeRight() {
+  z.style.display = "none";
+  oneCorrect.style.display = "block";
+  score = score + 1;
+  console.log(score);
+}
+//switches page
+function functionThreeWrong() {
+  z.style.display = "none";
+  oneWrong.style.display = "block";
+  console.log(score);
+}
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
@@ -97,36 +117,54 @@ function questionMaker(n, nOne, nTwo, nThree, nFour, nFive) {
   document.getElementById("fourthAnswer").innerHTML = allAnswersTwo[3];
   console.log(allAnswersTwo);
 }
-function makeAnswers() {
-  var text = document.createTextNode();
-  var element = document.getElementById("new");
-  element.appendChild(text);
+
+function questionNumba(sheep) {
+  if (sheep == 0) {
+    document.getElementById("questionId").innerHTML = "what is 2 + 2?";
+  }
+  if (sheep == 1) {
+    document.getElementById("questionId").innerHTML = "name a yellow fruit?";
+  }
+  if (sheep == 2) {
+    document.getElementById("questionId").innerHTML =
+      "I hope she made lotsa ___";
+  }
+  if (sheep == 3) {
+    document.getElementById("questionId").innerHTML =
+      "what color underwear am I wearing right now?";
+  }
 }
-//switches page
-function functionThreeRight() {
-  z.style.display = "none";
-  oneCorrect.style.display = "block";
-  score = score + 1;
-}
-//switches page
-function functionThreeWrong() {
-  z.style.display = "none";
-  oneWrong.style.display = "block";
-}
+questionNumba(questionNumb);
 
 btn.addEventListener("click", functionOne);
-btnTwo.addEventListener(
-  "click",
-  functionTwo
-); /* btnTwo.addEventListener("click", timerFunction); */
+btnTwo.addEventListener("click", functionTwo);
+
+/* btnTwo.addEventListener("click", timerFunction); */
 
 //click makes one correct answer and three random wrong answers
-/* btnThree.addEventListener("click", functionThree); */ btnTwo.addEventListener(
-  "click",
-  questionMaker
-);
+/* btnThree.addEventListener("click", functionThree); */
 
-btnThreeOne.addEventListener("click", functionThreeWrong);
-btnThreeTwo.addEventListener("click", functionThreeWrong);
-btnThreeThree.addEventListener("click", functionThreeWrong);
-btnThreeFour.addEventListener("click", functionThreeRight);
+btnTwo.addEventListener("click", questionMaker);
+
+//insert an if questionNumb === 1 or something
+//checks if answer chosen is correct or wrong and showing the right page
+if (document.getElementById("firstAnswer").innerHTML === "4") {
+  btnThreeOne.addEventListener("click", functionThreeRight);
+} else {
+  btnThreeOne.addEventListener("click", functionThreeWrong);
+}
+if (document.getElementById("secondAnswer").innerHTML === "4") {
+  btnThreeTwo.addEventListener("click", functionThreeRight);
+} else {
+  btnThreeTwo.addEventListener("click", functionThreeWrong);
+}
+if (document.getElementById("thirdAnswer").innerHTML === "4") {
+  btnThreeThree.addEventListener("click", functionThreeRight);
+} else {
+  btnThreeThree.addEventListener("click", functionThreeWrong);
+}
+if (document.getElementById("fourthAnswer").innerHTML === "4") {
+  btnThreeFour.addEventListener("click", functionThreeRight);
+} else {
+  btnThreeFour.addEventListener("click", functionThreeWrong);
+}

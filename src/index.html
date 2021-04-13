@@ -42,7 +42,7 @@
         </div>
         <div class="answers">
             <div class="score">Score:</div>
-            <div class="question">hullo</div>
+            <div id="questionId" class="question"></div>
         </div>
         <div class="answers">
                 <button id="firstAnswer" class="answerOne"></button>
@@ -52,6 +52,20 @@
                 <button id="thirdAnswer" class="answerThree"></button>
                 <button id="fourthAnswer" class="answerFour"></button>
         </div>
+    </div>
+    <div id="correctOne" class="testQuestion" hidden>
+        <div class="marginTopContinueScreen">
+            <p class="right">Right</p>
+            <div class="score">Score:</div>
+        </div>
+        <button id="continueButton" class="continue">Continue</button>
+    </div>
+    <div id="wrongOne" class="continueScreen" hidden>
+        <div class="marginTopContinueScreen">
+            <p class="wrong">Wrong</p>
+        <div class="score">Score:</div>
+        </div>
+        <button id="continueButton" class="continue">Continue</button>
     </div>
 
 
