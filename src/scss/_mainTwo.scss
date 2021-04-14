@@ -71,10 +71,8 @@
 }
 .organizer {
   display: flex;
-  align-items: space-between;
-  align-items: space-evenly;
-  justify-content: space-between;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
 }
 .message {
   color: white;
