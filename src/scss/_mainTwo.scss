@@ -69,3 +69,25 @@
   height: 75vh;
   width: 100vw;
 }
+.organizer {
+  display: flex;
+  align-items: space-between;
+  align-items: space-evenly;
+  justify-content: space-between;
+  justify-content: space-evenly;
+}
+.message {
+  color: white;
+  font-size: 10vh;
+}
+.border {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image {
+  height: 80vh;
+  width: 80%;
+}
