@@ -149,66 +149,29 @@ function questionMaker() {
   document.getElementById("secondAnswer").innerHTML = allAnswersTwo[1];
   document.getElementById("thirdAnswer").innerHTML = allAnswersTwo[2];
   document.getElementById("fourthAnswer").innerHTML = allAnswersTwo[3];
-  console.log(allAnswersTwo);
 }
+content1 = document.getElementById("firstAnswer").innerHTML.textContent;
+content2 = document.getElementById("secondAnswer").innerHTML.textContent;
+content3 = document.getElementById("thirdAnswer").innerHTML.textContent;
+content4 = document.getElementById("fourthAnswer").innerHTML.textContent;
+
+function checkCorrectAnswer(numberofQuestion) {
+  if (content1 === rightAnswer[numberofQuestion]) {
+    btnThreeOne.addEventListener("click", functionThreeRight);
+    console.log("success");
+  } else {
+    btnThreeOne.addEventListener("click", functionThreeWrong);
+  }
+}
+checkCorrectAnswer(questionNumb);
 
 btn.addEventListener("click", functionOne);
 btnTwo.addEventListener("click", functionTwo);
 
 /* btnTwo.addEventListener("click", timerFunction); */
-
-//click makes one correct answer and three random wrong answers
 /* btnThree.addEventListener("click", functionThree); */
 
 btnTwo.addEventListener("click", questionMaker);
-
-//insert an if questionNumb === 0 or something
-//checks if answer chosen is correct or wrong and showing the right page which doesn't work
-if (
-  document.getElementById("firstAnswer").innerHTML === "4" ||
-  document.getElementById("firstAnswer").innerHTML === "Orange" ||
-  document.getElementById("firstAnswer").innerHTML === "a stick" ||
-  document.getElementById("firstAnswer").innerHTML === "I don't know"
-) {
-  btnThreeOne.addEventListener("click", functionThreeRight);
-  console.log("success");
-} else {
-  btnThreeOne.addEventListener("click", functionThreeWrong);
-}
-if (
-  document.getElementById("secondAnswer").innerHTML === "4" ||
-  document.getElementById("secondAnswer").innerHTML === "Orange" ||
-  document.getElementById("secondAnswer").innerHTML === "a stick" ||
-  document.getElementById("secondAnswer").innerHTML === "I don't know"
-) {
-  btnThreeTwo.addEventListener("click", functionThreeRight);
-  console.log("success");
-} else {
-  btnThreeTwo.addEventListener("click", functionThreeWrong);
-}
-if (
-  document.getElementById("thirdAnswer").innerHTML === "4" ||
-  document.getElementById("thirdAnswer").innerHTML === "Orange" ||
-  document.getElementById("thirdAnswer").innerHTML === "a stick" ||
-  document.getElementById("thirdAnswer").innerHTML === "I don't know"
-) {
-  btnThreeThree.addEventListener("click", functionThreeRight);
-  console.log("success");
-} else {
-  btnThreeThree.addEventListener("click", functionThreeWrong);
-}
-if (
-  document.getElementById("fourthAnswer").innerHTML === "4" ||
-  document.getElementById("fourthAnswer").innerHTML === "Orange" ||
-  document.getElementById("fourthAnswer").innerHTML === "a stick" ||
-  document.getElementById("fourthAnswer").innerHTML === "I don't know"
-) {
-  btnThreeFour.addEventListener("click", functionThreeRight);
-  console.log("success");
-} else {
-  btnThreeFour.addEventListener("click", functionThreeWrong);
-}
-
 btnFourOne.addEventListener("click", functionFourRight);
 btnFourTwo.addEventListener("click", functionFourWrong);
 btnFourOne.addEventListener("click", questionMaker);

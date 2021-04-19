@@ -4,18 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/7f1eb47840b7bc0f165c306677bb5cfd.css">
-    <title>Projecto de technologia</title>
-</head>
+    <link rel="stylesheet" href="/main.77bb5cfd.css">
+    <title>Projecto de technologia2</title>
+<script src="/main.77bb5cfd.js"></script></head>
 
 <body>
-    <div class="quiz">
+    <section>
+        <div id="startQuiz" class="quizStart">
+            <div class="classOne">
+                <div class="ready">Are you ready?</div>
+            </div>
+            <div class="classRow">
+                <div class="classCol">
+                    <button href="" id="yesBtn" class="yes">Yes</button>
+                </div>
+                <div class="classCol">
+                    <button href="" id="noBtn" class="no">No</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="questions" class="testQuestion" hidden="">
+        <div class="classOne">
+            <div class="great">Great!</div>
+        </div>
+        <div class="classRow">
+            <div class="classCol">
+                <button href="" id="okayBtn" class="okay">okay</button>
+            </div>
+        </div>
+    </div>
+    <div id="questionsTwo" class="testQuestion" hidden="">
+        <div class="center">
+            <div class="bar">
+                <div id="timerid" class="timer"></div>
+            </div>
+        </div>
+        <div class="answers">
+            <div id="points" class="score"></div>
+            <div id="questionId" class="question"></div>
+        </div>
+        <div class="answers">
+                <button id="firstAnswer" class="answerOne"></button>
+                <button id="secondAnswer" class="answerTwo"></button>
+        </div>
+        <div class="answers">
+                <button id="thirdAnswer" class="answerThree"></button>
+                <button id="fourthAnswer" class="answerFour"></button>
+        </div>
+    </div>
+    <div id="correctOne" class="testQuestion" hidden="">
+        <div class="marginTopContinueScreen">
+            <div class="right">Right</div>
+            <div id="points" class="score"></div>
+            <button id="continueButtonOne" class="continue">Continue</button>
+        </div>
+    </div>
+    <div id="wrongOne" class="continueScreen" hidden="">
+        <div class="marginTopContinueScreen">
+            <div class="wrong">Wrong</div>
+            <div id="points" class="score"></div>
+            <button id="continueButtonTwo" class="continue">Continue</button>
+        </div>
+    </div>
+    <div id="end" class="endcredits" hidden="">
+        <div class="organizer">
+            <div class="message">Thank you for playing my game</div>
+            <div id="points" class="score"></div>
+        </div>
+        <div class="border">
+            <img src="/unnamed.8ecf1f57.jpg" alt="certification" class="image">
+        </div>
     </div>
 
 
-        
+    
     <div id="root"></div>
-    <script type="module" src="/ce8d93a16385590b555954a5f69400ca.js"></script>
-    <script src="/42f69825340f0b5fa628d80900a46daa.js"></script>
+    <script src="/js.00a46daa.js"></script>
 </body>
 </html>
