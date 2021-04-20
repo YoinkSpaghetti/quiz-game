@@ -17,6 +17,12 @@ let score = 0;
 var a = timerLength.style.width; */
 questionNumb = 0;
 
+const theQuestions = [
+  "what is 2 + 2?",
+  "name a yellow fruit?",
+  "what is brown and sticky?",
+  "what colour underwear am I wearing now?!?1",
+];
 var rightAnswer = ["4", "Orange", "a stick", "I don't know"];
 var wrongAnswer = [
   "click me",
@@ -87,20 +93,7 @@ function functionFourWrong() {
 }
 
 function questionNumbar(sheep) {
-  if (sheep == 0) {
-    document.getElementById("questionId").innerHTML = "what is 2 + 2?";
-  }
-  if (sheep == 1) {
-    document.getElementById("questionId").innerHTML = "name a yellow fruit?";
-  }
-  if (sheep == 2) {
-    document.getElementById("questionId").innerHTML =
-      "What is brown and sticky";
-  }
-  if (sheep == 3) {
-    document.getElementById("questionId").innerHTML =
-      "what color underwear am I wearing right now?!?1";
-  }
+  document.getElementById("questionId").innerHTML = theQuestions[sheep];
   if (sheep > 3) {
     x.style.display = "none";
     y.style.display = "none";
@@ -150,26 +143,61 @@ function questionMaker() {
   document.getElementById("thirdAnswer").innerHTML = allAnswersTwo[2];
   document.getElementById("fourthAnswer").innerHTML = allAnswersTwo[3];
 }
-content1 = document.getElementById("firstAnswer").innerHTML.textContent;
-content2 = document.getElementById("secondAnswer").innerHTML.textContent;
-content3 = document.getElementById("thirdAnswer").innerHTML.textContent;
-content4 = document.getElementById("fourthAnswer").innerHTML.textContent;
 
-function checkCorrectAnswer(numberofQuestion) {
-  if (content1 === rightAnswer[numberofQuestion]) {
-    btnThreeOne.addEventListener("click", functionThreeRight);
-    console.log("success");
-  } else {
-    btnThreeOne.addEventListener("click", functionThreeWrong);
-  }
+function checkCorrectAnswer() {
+  content1 = document.getElementById("firstAnswer").textContent;
+  content2 = document.getElementById("secondAnswer").textContent;
+  content3 = document.getElementById("thirdAnswer").textContent;
+  content4 = document.getElementById("fourthAnswer").textContent;
+
+  document.getElementById("firstAnswer").onclick = function () {
+    if (content1 === rightAnswer[questionNumb]) {
+      functionThreeRight();
+      console.log("success");
+    } else {
+      functionThreeWrong();
+      console.log("wrong wrong wrong");
+    }
+  };
+  document.getElementById("secondAnswer").onclick = function () {
+    if (content2 === rightAnswer[questionNumb]) {
+      functionThreeRight();
+      console.log("success");
+    } else {
+      functionThreeWrong();
+      console.log("wrong wrong wrong");
+    }
+  };
+  document.getElementById("thirdAnswer").onclick = function () {
+    if (content3 === rightAnswer[questionNumb]) {
+      functionThreeRight();
+      console.log("success");
+    } else {
+      functionThreeWrong();
+      console.log("wrong wrong wrong");
+    }
+  };
+  document.getElementById("fourthAnswer").onclick = function () {
+    if (content4 === rightAnswer[questionNumb]) {
+      functionThreeRight();
+      console.log("success");
+    } else {
+      functionThreeWrong();
+      console.log("wrong wrong wrong");
+    }
+  };
 }
-checkCorrectAnswer(questionNumb);
 
 btn.addEventListener("click", functionOne);
 btnTwo.addEventListener("click", functionTwo);
 
 /* btnTwo.addEventListener("click", timerFunction); */
 /* btnThree.addEventListener("click", functionThree); */
+
+btnThreeOne.addEventListener("click", checkCorrectAnswer);
+btnThreeTwo.addEventListener("click", checkCorrectAnswer);
+btnThreeThree.addEventListener("click", checkCorrectAnswer);
+btnThreeFour.addEventListener("click", checkCorrectAnswer);
 
 btnTwo.addEventListener("click", questionMaker);
 btnFourOne.addEventListener("click", functionFourRight);
