@@ -145,10 +145,27 @@ function questionMaker() {
 }
 
 function checkCorrectAnswer() {
+  click1 = document.getElementById("firstAnswer").onclick;
+  click2 = document.getElementById("secondAnswer").onclick;
+  click3 = document.getElementById("thirdAnswer").onclick;
+  click4 = document.getElementById("fourthAnswer").onclick;
+  clickArray = [click1, click2, click3, click4];
   content1 = document.getElementById("firstAnswer").textContent;
   content2 = document.getElementById("secondAnswer").textContent;
   content3 = document.getElementById("thirdAnswer").textContent;
   content4 = document.getElementById("fourthAnswer").textContent;
+  contentArray = [content1, content2, content3, content4];
+  counter2 = 0;
+
+  /* clickArray[counter2] = function () {
+    if (contentArray[counter2] === rightAnswer[questionNumb]) {
+      functionThreeRight();
+      console.log("success");
+    } else {
+      functionThreeWrong();
+      console.log("wrong wrong wrong");
+    }
+  }; */
 
   document.getElementById("firstAnswer").onclick = function () {
     if (content1 === rightAnswer[questionNumb]) {
